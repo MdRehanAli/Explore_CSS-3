@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visibility</title>
+
+    <style>
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: aqua;
+            border: 1px solid black;
+        }
+
+        #box-1 {
+            background-color: orange;
+        }
+
+        #box-2 {
+            background-color: blue;
+            /* If we use visibility it actually hide the property but keep its own place  */
+            visibility: hidden;
+        }
+
+        #box-3 {
+            background-color: red;
+            /* If we use display it actually hide the property and its own place also */
+            display: none;
+        }
+
+        #box-4 {
+            background-color: purple;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="box" id="box-1"></div>
+    <div class="box" id="box-2"></div>
+    <div class="box" id="box-3"></div>
+    <div class="box" id="box-4"></div>
 </body>
+
 </html>
