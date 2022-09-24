@@ -5,41 +5,80 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transform</title>
+    <title>transform</title>
 
     <style>
-        .boxes,
-        .box {
-            width: 200px;
-            height: 200px;
+        .container {
+            width: 150px;
+            height: 150px;
+            border: 3px solid purple;
+        }
+
+        .box-1 {
+            width: 150px;
+            height: 150px;
+            background-color: orangered;
+            transition: transform 1s ease-in;
 
         }
 
-        .boxes {
-            background-color: lightcoral;
-            border: 2px solid gold;
+        .box-2 {
+            width: 150px;
+            height: 150px;
+            background-color: greenyellow;
+            transition: transform 1s ease-in;
+
         }
 
-        .box {
-            background-color: palegreen;
-            /* transform: scale(.75); */
-            /* transform: rotate(45deg); */
-            /* transform: translate(100px); */
-            transform: scale(.6) rotate(45deg) translate(100px, 100px);
+        .box-3 {
+            width: 150px;
+            height: 150px;
+            background-color: rebeccapurple;
+            transition: transform 1s ease-in;
+
+        }
+
+        .box-4 {
+            width: 150px;
+            height: 150px;
+            background-color: rosybrown;
+            transition: skew 1s ease-in;
+
+        }
+
+        .main:hover .box-1 {
+            transform: scale(.5);
+        }
+
+        .main:hover .box-2 {
+            transform: rotate(45deg);
+        }
+
+        .main:hover .box-3 {
+            transform: translate(100px, 100px);
+        }
+
+        .main:hover .box-4 {
+            transform: skew(-20deg) scale(.75);
         }
     </style>
 </head>
 
 <body>
-    <h1>Transform in Css</h1>
-    <div class="boxes">
-        <div class="box">box-1</div>
-    </div>
-    <div class="boxes">
-        <div class="box">box-2</div>
-    </div>
-    <div class="boxes">
-        <div class="box">box-3</div>
+
+    <div class="main">
+        <div class="container">
+            <div class="box-1"> Red</div>
+        </div>
+        <div class="container">
+            <div class="box-2"> Green</div>
+        </div>
+        <div class="container">
+            <div class="box-3">Purple</div>
+        </div>
+        <div class="container">
+            <div class="box-4">Brown</div>
+        </div>
     </div>
 </body>
 
